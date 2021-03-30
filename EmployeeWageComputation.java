@@ -1,25 +1,38 @@
 import java.util.*;
-public class uc3_EmployeeWage_Computation_with_Part_Time_Employee{
+public class uc4_EmployeeWage_Computation_for_A_month{
+           
+           
        public static void main(String[] args){
+           int hrs=0;
            int wage;
+           int rate=20;
+           int totalwage=0;
+            for (int day=0; day<20; day++)
+            {
             Random rnum = new Random();
-            int num = rnum.nextInt(3);
-            System.out.println(num);
-          if ( num == 0)
-          {
-              wage = 8*20;
-              System.out.println("the employee wage is ");
-              System.out.println(wage);
-          }
-          else if ( num == 1) 
-          {
-              wage = 4*20;
-              System.out.println("wage of the part time employee is ");
-              System.out.println(wage);
-          }
-          else 
-          {
-              System.out.println("the employee is absent");
-          }
-         }
-      }
+            int checker = rnum.nextInt(3);
+           
+            switch (checker) {
+            
+          
+              case 1:
+                  hrs = 8;
+                  break;
+                  
+              case 0:
+                  hrs=4;
+                  break;
+                  
+              default:
+                  hrs=0;
+          
+                 }  
+           wage = hrs * rate;
+            totalwage += wage ;
+            System.out.println(wage);
+        }
+         System.out.println(totalwage);
+            
+        
+    }
+ }
